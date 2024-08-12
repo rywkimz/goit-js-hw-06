@@ -6,23 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 3</title>
     <link rel="stylesheet" href="css/common.css" />
+    <ul class="gallery"></ul>
+
     <style>
       .gallery {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
-        list-style: none;
+        list-style-type: none;
         padding: 0;
         margin: 0;
+        gap: 10px;
+        justify-content: center;
       }
+
       .gallery li {
-        flex: 1 1 calc(33.333% - 10px);
-        box-sizing: border-box;
+        max-width: 300px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
       }
+
       .gallery img {
         width: 100%;
         height: auto;
         display: block;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05);
       }
     </style>
   </head>
